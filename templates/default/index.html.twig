@@ -1,0 +1,20 @@
+{% for tenten in tentens %}
+<table cellspacing="0">
+    {% for line in tenten %}
+        {% if loop.index0 == 0 %}
+            <thead>
+            <tr>
+                <th colspan='10'>{{ line }}</th>
+            </tr>
+            </thead>
+        {% else %}
+            <tr style='height: 20px' >
+            {% for cell in line %}
+                <td style='width: 20px; background-color: {{ cell }}'></td>
+            {% endfor %}
+            </tr>
+        {% endif %}
+    {% endfor %}
+</table>
+<hr>
+{% endfor %}
